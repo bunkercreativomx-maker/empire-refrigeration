@@ -1,0 +1,8 @@
+.venv/
+.env
+.supabase_anon
+genlog.txt
+images/_bg*.png
+pilots/
+assets-logo.png
+__pycache__/
