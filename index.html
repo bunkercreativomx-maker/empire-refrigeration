@@ -100,12 +100,7 @@ function render(){
       <div class="body">
         <div class="topic">${esc(p.topic)}</div>
         <div class="tags"><span class="tag">${esc(p.pillar)}</span><span class="tag">CTA: ${esc(p.cta)}</span></div>
-        <div class="aida">
-          <b>ATTENTION</b>${esc(p.A)}
-          <b>INTEREST</b>${esc(p.I)}
-          <b>DESIRE</b>${esc(p.D)}
-          <b>ACTION</b>${esc(p.Action)}
-        </div>
+        <div class="aida">${esc(p.A)} ${esc(p.I)} ${esc(p.D)} ${esc(p.Action)}</div>
       </div>
       <div class="actions">
         <button class="btn approve ${st.status==='approved'?'on':''}" onclick="setStatus(${p.id},'approved')">✅ Approve</button>
