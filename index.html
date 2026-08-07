@@ -4,136 +4,264 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Empire Refrigeration — August 2026 Facebook Campaign Approval</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--pink:#FF0067;--blue:#119DD7;--yellow:#FFF200;--navy:#002E5B;--bg:#0a1420;--card:#0f2036;--ink:#eaf2fb;--mut:#9fb3c8}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
-header{background:linear-gradient(135deg,var(--navy),#013b73);padding:28px 20px;border-bottom:4px solid var(--yellow)}
-header h1{font-size:1.6rem;color:#fff}
-header .sub{color:var(--blue);font-weight:600;margin-top:4px}
-header .meta{color:var(--mut);font-size:.85rem;margin-top:8px}
-.bar{position:sticky;top:0;z-index:20;background:#08111c;border-bottom:1px solid #1c3350;padding:12px 20px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
-.bar .stat{font-size:.85rem;color:var(--mut)}
-.bar .stat b{color:var(--ink)}
-.wrap{max-width:1200px;margin:0 auto;padding:20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
-.card{background:var(--card);border:1px solid #1c3350;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
-.card .top{padding:12px 14px;background:linear-gradient(135deg,#0c2745,#0a1c31);border-bottom:1px solid #1c3350;display:flex;justify-content:space-between;align-items:center}
-.card .dt{font-weight:800;color:#fff}
-.card .dt small{color:var(--blue);font-weight:600}
-.pill{font-size:.68rem;font-weight:800;padding:3px 8px;border-radius:6px;background:var(--navy);color:var(--blue);border:1px solid var(--blue)}
-.imgwrap{position:relative;background:#08111c;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:pointer}
-.imgwrap img{width:100%;height:100%;object-fit:cover;display:block}
-.imgwrap .ph{color:var(--mut);font-size:.85rem;text-align:center;padding:20px}
-.statusflag{position:absolute;top:8px;left:8px;font-size:.66rem;font-weight:800;padding:3px 8px;border-radius:6px;z-index:2}
-.statusflag.pending{background:rgba(255,242,0,.9);color:#000}
-.statusflag.approved{background:rgba(20,201,110,.95);color:#022}
-.statusflag.changes{background:var(--pink);color:#fff}
-.card .body{padding:14px;flex:1}
-.topic{font-weight:800;color:#fff;font-size:1.02rem;margin-bottom:4px}
-.tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
-.tag{font-size:.66rem;padding:2px 7px;border-radius:5px;background:#0a1c31;color:var(--mut);border:1px solid #1c3350}
-.aida{font-size:.85rem;margin:8px 0}
-.aida b{color:var(--yellow);font-size:.7rem;letter-spacing:.5px;display:block;margin-top:8px}
-.actions{padding:12px 14px;border-top:1px solid #1c3350;display:flex;gap:8px;flex-wrap:wrap}
-.btn{flex:1;min-width:90px;padding:9px;border:none;border-radius:9px;font-weight:800;font-size:.82rem;cursor:pointer;transition:.15s}
-.btn.approve{background:#124a30;color:#7fffb0}
-.btn.approve.on{background:#14c96e;color:#022}
-.btn.change{background:#4a1230;color:#ff9dc4}
-.btn.change.on{background:var(--pink);color:#fff}
-.note{width:100%;margin-top:8px;padding:8px;background:#08111c;border:1px solid #1c3350;border-radius:8px;color:var(--ink);font-size:.82rem;resize:vertical;min-height:38px;display:none}
-.note.show{display:block}
-.submit{position:sticky;bottom:0;background:#08111c;border-top:1px solid var(--yellow);padding:16px 20px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center}
-.field{padding:10px 12px;border:1px solid #1c3350;border-radius:9px;background:#0f2036;color:var(--ink);font-size:.9rem}
-.send{background:var(--yellow);color:var(--navy);font-weight:900;padding:12px 28px;border:none;border-radius:10px;font-size:1rem;cursor:pointer}
-.send:disabled{opacity:.5;cursor:not-allowed}
-.toast{position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#14c96e;color:#022;padding:14px 24px;border-radius:10px;font-weight:800;z-index:99;display:none}
-.legend{color:var(--mut);font-size:.8rem;padding:0 20px 10px}
-.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
-.lightbox.on{display:flex}
-.lightbox img{max-width:95%;max-height:95%;border-radius:8px}
+  :root{
+    --pink:#FF0067;--blue:#119DD7;--yellow:#FFF200;--navy:#002E5B;
+    --bg:#070d16;--card:rgba(255,255,255,.045);--ink:#eaf2fb;--mut:#9fb3c8;
+    --line:rgba(255,255,255,.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;overflow-x:hidden;
+    background-image:radial-gradient(900px 520px at 10% -8%, rgba(255,0,103,.16), transparent 60%),
+      radial-gradient(820px 520px at 96% 0%, rgba(17,157,215,.14), transparent 55%),
+      linear-gradient(180deg,#070d16,#0a1322);min-height:100vh;}
+  .bar{position:sticky;top:0;z-index:30;background:rgba(8,17,28,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);padding:13px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;}
+  .bar .stat{font-size:.85rem;color:var(--mut)}
+  .bar .stat b{color:var(--ink)}
+  .brandline{font-weight:800;color:#fff;font-family:'Playfair Display',serif;font-size:1.05rem;margin-right:auto;letter-spacing:.3px}
+  .brandline span{color:var(--pink)}
+  .wrap{max-width:1360px;margin:0 auto;padding:30px 22px 70px}
+  header{text-align:center;padding:62px 16px 36px;}
+  .kicker{display:inline-block;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--yellow);border:1px solid var(--line);padding:6px 16px;border-radius:30px;background:rgba(255,242,0,.06);margin-bottom:18px;animation:fadeUp .8s both;}
+  h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(34px,6vw,58px);line-height:1.05;letter-spacing:-.5px;
+    background:linear-gradient(100deg,#fff 10%,#ff7ac0 45%,var(--yellow) 92%);-webkit-background-clip:text;background-clip:text;color:transparent;animation:fadeUp 1s .1s both;}
+  .sub{color:var(--mut);font-size:15px;margin-top:14px;animation:fadeUp 1s .2s both}
+  .sub b{color:var(--ink);font-weight:600}
+  .section-title{font-family:'Playfair Display',serif;font-size:clamp(22px,3.4vw,30px);font-weight:700;color:#fff;margin:54px 0 22px;
+    display:flex;align-items:center;gap:14px;animation:fadeUp 1s both}
+  .section-title::before{content:"";width:38px;height:2px;background:linear-gradient(90deg,var(--pink),var(--yellow));border-radius:2px;}
+  .section-title .count{font-family:'Inter',sans-serif;font-size:13px;color:var(--mut);font-weight:600;letter-spacing:0;}
+  /* ===== GRID: 4 columns on desktop ===== */
+  .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;align-items:start;}
+  @media(max-width:1200px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+  @media(max-width:820px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+  @media(max-width:520px){.grid{grid-template-columns:1fr;}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);position:relative;display:flex;flex-direction:column;
+    transition:transform .45s cubic-bezier(.2,.8,.2,1),border-color .4s,box-shadow .45s;box-shadow:0 10px 30px rgba(0,0,0,.35);}
+  .card.ad{border-color:rgba(255,0,103,.35);box-shadow:0 14px 40px rgba(255,0,103,.12);}
+  .card:hover{transform:translateY(-8px);border-color:rgba(255,122,192,.5);box-shadow:0 26px 60px rgba(255,0,103,.18);}
+  .top{padding:12px 14px;background:linear-gradient(135deg,rgba(12,39,69,.6),rgba(10,28,49,.4));border-bottom:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;}
+  .dt{font-weight:800;color:#fff;font-size:.92rem}
+  .dt small{color:var(--blue);font-weight:600;font-size:.78rem;margin-left:5px}
+  .pill{font-size:.66rem;font-weight:800;padding:4px 9px;border-radius:6px;background:var(--navy);color:var(--blue);border:1px solid var(--blue)}
+  .adtag{font-size:.66rem;font-weight:800;padding:4px 9px;border-radius:6px;background:var(--pink);color:#fff;letter-spacing:.5px}
+  /* image shown FULL, no crop: contain + auto height */
+  .imgwrap{position:relative;background:#08111c;display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:zoom-in;}
+  .imgwrap img{width:100%;height:auto;max-height:560px;object-fit:contain;display:block;-webkit-user-drag:none;user-select:none;
+    transition:transform .5s cubic-bezier(.2,.8,.2,1);}
+  .card:hover .imgwrap img{transform:scale(1.03);}
+  .imgwrap .ph{color:var(--mut);font-size:.85rem;text-align:center;padding:24px;}
+  .statusflag{position:absolute;top:10px;left:10px;font-size:.66rem;font-weight:800;padding:4px 9px;border-radius:6px;z-index:2;letter-spacing:.5px}
+  .statusflag.pending{background:rgba(255,242,0,.92);color:#000}
+  .statusflag.approved{background:rgba(20,201,110,.95);color:#022}
+  .statusflag.changes{background:var(--pink);color:#fff}
+  .body{padding:15px;flex:1;display:flex;flex-direction:column;}
+  .topic{font-weight:800;color:#fff;font-size:1.02rem;margin-bottom:5px;line-height:1.25}
+  .tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+  .tag{font-size:.66rem;padding:3px 8px;border-radius:5px;background:rgba(10,28,49,.6);color:var(--mut);border:1px solid var(--line)}
+  .aida{font-size:.86rem;margin:6px 0 4px;color:#d6e2f0;line-height:1.55}
+  .actions{padding:13px 14px;border-top:1px solid var(--line);display:flex;gap:9px;flex-wrap:wrap;}
+  .btn{flex:1;min-width:96px;padding:11px;border:none;border-radius:11px;font-weight:800;font-size:.82rem;cursor:pointer;
+    transition:transform .22s,box-shadow .3s,filter .3s;font-family:inherit;color:#fff;}
+  .btn.approve{background:linear-gradient(120deg,#0e9b54,#16c96e);box-shadow:0 8px 22px rgba(20,201,110,.28);}
+  .btn.change{background:linear-gradient(120deg,#7a0f33,#b3124f);}
+  .btn.approve.on{background:linear-gradient(120deg,#14c96e,#4ade80);color:#022;}
+  .btn.change.on{background:linear-gradient(120deg,#FF0067,#ff5aae);color:#fff;}
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.08);}
+  .btn:active{transform:translateY(0) scale(.97);}
+  .note{width:100%;margin-top:9px;padding:9px 11px;background:rgba(8,17,28,.7);border:1px solid var(--line);border-radius:9px;
+    color:var(--ink);font-size:.82rem;resize:vertical;min-height:42px;display:none;font-family:inherit;}
+  .note.show{display:block}
+  .note:focus{outline:none;border-color:var(--pink);box-shadow:0 0 0 3px rgba(255,0,103,.18);}
+  .legend{color:var(--mut);font-size:.8rem;padding:4px 2px 0}
+  .legend b{color:var(--ink)}
+  .submit{position:sticky;bottom:0;z-index:25;background:rgba(8,17,28,.92);backdrop-filter:blur(14px);border-top:1px solid var(--yellow);
+    padding:16px 20px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center;}
+  .field{padding:11px 13px;border:1px solid var(--line);border-radius:10px;background:#0f2036;color:var(--ink);font-size:.92rem;min-width:220px;font-family:inherit;}
+  .field:focus{outline:none;border-color:var(--yellow);box-shadow:0 0 0 3px rgba(255,242,0,.18);}
+  .send{background:var(--yellow);color:var(--navy);font-weight:900;padding:13px 30px;border:none;border-radius:11px;font-size:1rem;cursor:pointer;
+    box-shadow:0 10px 30px rgba(255,242,0,.32);transition:transform .22s,filter .3s;}
+  .send:hover{transform:translateY(-2px);filter:brightness(1.05);}
+  .send:disabled{opacity:.5;cursor:not-allowed;transform:none;filter:none;}
+  .toast{position:fixed;top:22px;left:50%;transform:translateX(-50%) translateY(-120px);background:#14c96e;color:#022;padding:14px 26px;
+    border-radius:12px;font-weight:800;z-index:99;box-shadow:0 14px 40px rgba(20,201,110,.4);transition:transform .5s cubic-bezier(.2,.9,.2,1);pointer-events:none;}
+  .toast.show{transform:translateX(-50%) translateY(0);}
+  .lightbox{position:fixed;inset:0;background:rgba(6,10,18,.95);z-index:100;display:none;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(8px);}
+  .lightbox.on{display:flex;animation:fadeUp .25s both;}
+  .lightbox img{max-width:92vw;max-height:88vh;width:auto;height:auto;object-fit:contain;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.6);-webkit-user-drag:none;user-select:none;}
+  .lbclose{position:absolute;top:20px;right:26px;color:#fff;font-size:30px;cursor:pointer;font-weight:700;line-height:1;opacity:.85;}
+  .lbhint{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);color:var(--mut);font-size:12px;}
+  /* reveal on scroll */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1);}
+  .reveal.in{opacity:1;transform:none;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.reveal,.kicker,h1,.sub{animation:none!important;opacity:1!important;transform:none!important}.card:hover{transform:none}.card:hover .imgwrap img{transform:none}}
 </style>
 </head>
 <body>
-<header>
-  <h1>👑 Empire Refrigeration</h1>
-  <div class="sub">August 2026 — Facebook Content Calendar · 30 Posts</div>
-  <div class="meta">Refrigerated Air · AC · Furnace · Unit Packages &nbsp;|&nbsp; 915.787.0747 · WeNeedAir.com · TX LIC# TACLB57040E</div>
-</header>
 <div class="bar">
+  <div class="brandline">👑 Empire <span>Refrigeration</span></div>
   <div class="stat">Total: <b>30</b></div>
   <div class="stat">✅ Approved: <b id="cOk">0</b></div>
   <div class="stat">✏️ Changes: <b id="cCh">0</b></div>
   <div class="stat">⏳ Pending: <b id="cPe">30</b></div>
 </div>
-<div class="legend">Review each post's image + copy. ✅ Approve it, or ✏️ request changes with a note. Then enter your name and click <b>Submit Approval</b>. / Revisa la imagen y el texto de cada post. Apruébalo o pide cambios con una nota. Escribe tu nombre y haz clic en <b>Submit Approval</b>.</div>
-<div class="wrap"><div class="grid" id="grid"></div></div>
-<div class="submit">
-  <input class="field" id="clientName" placeholder="Your name / Tu nombre" />
-  <button class="send" id="sendBtn" onclick="submitReview()">✅ Submit Approval / Enviar</button>
+
+<header>
+  <span class="kicker">Client Review · Confidential</span>
+  <h1>Empire Refrigeration</h1>
+  <p class="sub"><b>August 2026 Facebook Campaign</b> &nbsp;·&nbsp; 30 Posts + Month Ad Set<br>
+  Refrigerated Air · AC · Furnace · Unit Packages &nbsp;|&nbsp; 📞 915.787.0747 · WeNeedAir.com · TX LIC# TACLB57040E</p>
+</header>
+
+<div class="wrap">
+  <div class="section-title">Facebook Content — 30-Day Calendar <span class="count">(30 posts)</span></div>
+  <div class="grid" id="grid"></div>
+
+  <div class="section-title">Facebook Ads — Month Campaign <span class="count">(4 ads)</span></div>
+  <div class="grid" id="ads"></div>
+
+  <p class="legend" style="margin-top:14px">Review each post's image + copy. <b>Approve</b> it, or <b>Request Changes</b> with a note. Then enter your name and click <b>Submit Approval</b>.</p>
 </div>
+
+<div class="submit">
+  <input class="field" id="clientName" placeholder="Your name" />
+  <button class="send" id="sendBtn" onclick="submitReview()">✅ Submit Approval</button>
+</div>
+
 <div class="toast" id="toast"></div>
-<div class="lightbox" id="lb" onclick="this.classList.remove('on')"><img id="lbimg" src=""></div>
+<div class="lightbox" id="lb" onclick="this.classList.remove('on')">
+  <span class="lbclose" onclick="document.getElementById('lb').classList.remove('on')">✕</span>
+  <img id="lbimg" src="" alt="">
+  <div class="lbhint">Click anywhere to close</div>
+</div>
+
 <script>
 const SUPABASE_URL='https://nmykwwhpjukmlzhaimuu.supabase.co';
 const SUPABASE_ANON='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5teWt3d2hwanVrbWx6aGFpbXV1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODUwMTc3NzAsImV4cCI6MjEwMDU5Mzc3MH0.XAnVz_2Z8YpHYqSK8u_mYeS5o__ULVwi9SqqByVpE_o';
 const CLIENT='empire-refrigeration';
 const CAMPAIGN='august-2026';
 const POSTS=[{"id": 1, "date": "Aug 1", "day": "Fri", "pillar": "BOFU Conversion", "funnel": "Conversion", "topic": "Swamp cooler vs refrigerated air", "cta": "Free estimate", "visual": "Pop-art split: sweating swamp cooler vs cool refrigerated home, ZERO DOWN badge", "A": "Still fighting your swamp cooler every El Paso summer? \ud83d\udca7\ud83e\udd75", "I": "Evaporative coolers lose the battle against monsoon humidity \u2014 they just push warm, damp air around your house.", "D": "Real refrigerated air holds a true 72\u00b0F, kills the humidity, and runs all summer long. And right now you can convert with ZERO DOWN.", "Action": "\ud83d\udcde Get your FREE estimate today: 915.787.0747 or comment \"AIR\"."}, {"id": 2, "date": "Aug 2", "day": "Sat", "pillar": "TOFU Education", "funnel": "Awareness", "topic": "5 signs your AC needs repair", "cta": "Save this post", "visual": "Carousel-style checklist graphic, 5 icons, brand pop-art", "A": "Your AC is trying to tell you something. Are you listening? \ud83d\udc42", "I": "5 warning signs: weak airflow, warm air, strange noises, high bills, and short cycling.", "D": "Catching these early saves you from a full breakdown in the middle of a 105\u00b0F afternoon.", "Action": "\ud83d\udcbe Save this post so you don't forget \u2014 and call us if you spot any of these."}, {"id": 3, "date": "Aug 3", "day": "Sun", "pillar": "MOFU Trust", "funnel": "Consideration", "topic": "Meet the team \u2014 15+ years in El Paso", "cta": "Comment \ud83d\udc4b", "visual": "Real technician photo (client-provided) + crowned mascot", "A": "The faces behind Empire Refrigeration \ud83d\udc4b", "I": "Locally owned and operated for over 15 years, licensed, insured and bonded \u2014 and we speak English & Spanish.", "D": "When you call Empire, you get real El Paso neighbors who know the Sun City's climate inside and out.", "Action": "\ud83d\udc4b Say hi in the comments \u2014 we'd love to meet you!"}, {"id": 4, "date": "Aug 4", "day": "Mon", "pillar": "BOFU Service", "funnel": "Conversion", "topic": "AC not cooling \u2014 same-day service", "cta": "Call now", "visual": "Technician diagnosing unit, 'SAME-DAY SERVICE' pop-art banner", "A": "AC blowing warm air? Don't sweat it out. \ud83d\udd25", "I": "Our certified techs diagnose fast and fix it right the first time \u2014 minimizing your downtime.", "D": "Same-day appointments mean your home is back to comfortable before dinner.", "Action": "\ud83d\udcde Call 915.787.0747 now for same-day service."}, {"id": 5, "date": "Aug 5", "day": "Tue", "pillar": "TOFU Engagement", "funnel": "Awareness", "topic": "Thermostat poll", "cta": "Vote in comments", "visual": "Big thermostat graphic, poll style", "A": "Settle a household debate \ud83c\udf21\ufe0f", "I": "What do YOU set your thermostat to in the summer?", "D": "There's a sweet spot for comfort AND lower bills \u2014 and we'll share it in the comments.", "Action": "\ud83d\uddf3\ufe0f Drop your number below: 68 \u00b7 72 \u00b7 76 \u00b7 78?"}, {"id": 6, "date": "Aug 6", "day": "Wed", "pillar": "BOFU Offer", "funnel": "Conversion", "topic": "$1,800 OFF refrigeration conversion", "cta": "DM \"AIR\"", "visual": "Hero pop-art: $1,800 OFF starburst, refrigerated air", "A": "$1,800 reasons to ditch that swamp cooler. \ud83d\udcb0", "I": "Convert your old system to true refrigerated air and save $1,800 on the upgrade.", "D": "Cooler home, lower humidity, higher property value \u2014 for less than you think.", "Action": "\ud83d\udcac DM us \"AIR\" or call 915.787.0747 to claim it."}, {"id": 7, "date": "Aug 7", "day": "Thu", "pillar": "TOFU Education", "funnel": "Awareness", "topic": "Myth: turning AC off saves more", "cta": "Share", "visual": "MYTH vs FACT pop-art graphic", "A": "MYTH: Turning your AC off while you're out saves the most money. \u274c", "I": "Actually, your system works harder to re-cool a hot house than to maintain a steady temp.", "D": "A smart thermostat setback (not full off) is the real money-saver in El Paso heat.", "Action": "\ud83d\udd01 Share this with someone who always turns it off!"}, {"id": 8, "date": "Aug 8", "day": "Fri", "pillar": "MOFU Trust", "funnel": "Consideration", "topic": "Real review \u2014 Vanessa R.", "cta": "Read more reviews", "visual": "5-star review card, brand colors (client-authorized review)", "A": "\"The entire experience was seamless.\" \u2b50\u2b50\u2b50\u2b50\u2b50", "I": "Vanessa R. got her AC installed by our crew \u2014 on time, professional, done right.", "D": "That's the Empire standard: a whole team of specialists who show up and deliver.", "Action": "\u2b50 Read more reviews and see why El Paso trusts Empire."}, {"id": 9, "date": "Aug 9", "day": "Sat", "pillar": "TOFU Education", "funnel": "Awareness", "topic": "How refrigerated air actually works", "cta": "Save this", "visual": "Simple diagram, cool pop-art, mascot explaining", "A": "Ever wonder how refrigerated air actually cools your home? \ud83e\uddca", "I": "Unlike a swamp cooler that adds moisture, refrigerated air pulls heat OUT and dries the air.", "D": "That's why your home feels crisp and comfortable, even during monsoon season.", "Action": "\ud83d\udcbe Save this so you can explain it at the next family BBQ."}, {"id": 10, "date": "Aug 10", "day": "Sun", "pillar": "TOFU Lifestyle", "funnel": "Awareness", "topic": "Summer comfort at home", "cta": "React \u2744\ufe0f", "visual": "Family relaxing in cool home, warm-cool contrast", "A": "This is what a real El Paso summer should feel like. \u2744\ufe0f", "I": "No sticky humidity. No warm rooms. Just cool, quiet comfort for the whole family.", "D": "Your home should be your escape from the heat \u2014 not another hot spot.", "Action": "\u2744\ufe0f React if your home is your happy place!"}, {"id": 11, "date": "Aug 11", "day": "Mon", "pillar": "TOFU Education", "funnel": "Awareness", "topic": "How often to service your AC", "cta": "Save this", "visual": "Calendar + wrench graphic", "A": "When did you last have your AC serviced? \ud83d\udd27", "I": "Experts recommend a professional tune-up at least once a year \u2014 ideally before peak summer.", "D": "Regular maintenance means fewer breakdowns, lower bills, and a longer system life.", "Action": "\ud83d\udcbe Save this reminder and book your tune-up."}, {"id": 12, "date": "Aug 12", "day": "Tue", "pillar": "MOFU Consideration", "funnel": "Consideration", "topic": "Repair or replace?", "cta": "Free estimate", "visual": "Split graphic: repair vs replace decision", "A": "Repair it\u2026 or replace it? \ud83e\udd14", "I": "If your system is 10+ years old and needs frequent repairs, replacing may cost less long-term.", "D": "We give you honest, upfront advice \u2014 no pressure, no hidden fees.", "Action": "\ud83d\udcde Get a free estimate and we'll help you decide: 915.787.0747."}, {"id": 13, "date": "Aug 13", "day": "Wed", "pillar": "TOFU Engagement", "funnel": "Awareness", "topic": "Guess El Paso's temp today", "cta": "Comment", "visual": "Big thermometer, desert sun, mascot sweating", "A": "How hot is it in the Sun City today? \u2600\ufe0f", "I": "Take a guess at today's high temperature in El Paso.", "D": "Whatever it is out there, your home doesn't have to feel it.", "Action": "\ud83d\udcac Drop your guess in the comments!"}, {"id": 14, "date": "Aug 14", "day": "Thu", "pillar": "BOFU Service", "funnel": "Conversion", "topic": "Unit packages explained", "cta": "Learn more", "visual": "All-in-one package unit, clean pop-art", "A": "One unit. Heating AND cooling. \ud83d\udce6", "I": "Packaged units combine everything in a single system \u2014 perfect for homes without indoor space for separate components.", "D": "Efficient, space-saving, and installed by experts who back it with warranties.", "Action": "\ud83d\udd17 Ask us if a unit package is right for your home."}, {"id": 15, "date": "Aug 15", "day": "Fri", "pillar": "MOFU Trust", "funnel": "Consideration", "topic": "Licensed, insured & bonded", "cta": "Call", "visual": "Badge graphic, TX LIC pop-art", "A": "Would you let just anyone into your home? \ud83d\udee1\ufe0f", "I": "Empire is licensed, insured and bonded \u2014 TX LIC# TACLB57040E.", "D": "That's real protection and real peace of mind for one of your biggest investments.", "Action": "\ud83d\udcde Work with pros you can trust: 915.787.0747."}, {"id": 16, "date": "Aug 16", "day": "Sat", "pillar": "TOFU Education", "funnel": "Awareness", "topic": "Why swamp coolers fail in monsoon", "cta": "Share", "visual": "Rain clouds + failing cooler graphic", "A": "Why does your swamp cooler quit right when you need it most? \ud83c\udf27\ufe0f", "I": "During monsoon season, the air is already humid \u2014 so evaporative coolers can't cool effectively.", "D": "Refrigerated air doesn't care about humidity. It keeps working all season.", "Action": "\ud83d\udd01 Share this with a friend still on a swamp cooler."}, {"id": 17, "date": "Aug 17", "day": "Sun", "pillar": "BOFU Offer", "funnel": "Conversion", "topic": "Financing available", "cta": "DM \"PLAN\"", "visual": "ZERO DOWN + 0% interest pop-art", "A": "A new AC without draining your savings? Yes. \ud83d\udcb3", "I": "With financing, ZERO DOWN and low monthly payments, comfort is more affordable than ever.", "D": "Stay cool now, pay over time \u2014 no huge upfront cost.", "Action": "\ud83d\udcac DM \"PLAN\" or call 915.787.0747 to see your options."}, {"id": 18, "date": "Aug 18", "day": "Mon", "pillar": "BOFU Service", "funnel": "Conversion", "topic": "Fast AC repair", "cta": "Book now", "visual": "Clock + technician, 'FIXED FAST' banner", "A": "A broken AC in August is an emergency. \u23f1\ufe0f", "I": "We diagnose quickly and carry common parts to fix it the same visit whenever possible.", "D": "Less downtime means your family stays comfortable, fast.", "Action": "\ud83d\udcc5 Book your repair now: 915.787.0747."}, {"id": 19, "date": "Aug 19", "day": "Tue", "pillar": "TOFU Engagement", "funnel": "Awareness", "topic": "Tag someone who's always hot", "cta": "Tag a friend", "visual": "Funny mascot fanning itself, playful pop-art", "A": "Tag the person who's ALWAYS complaining they're hot \ud83e\udd75", "I": "We all know one. (Maybe it's you.)", "D": "Good news: we can fix that. Real refrigerated air ends the thermostat wars.", "Action": "\ud83d\udc47 Tag them below!"}, {"id": 20, "date": "Aug 20", "day": "Wed", "pillar": "TOFU Education", "funnel": "Awareness", "topic": "Right-sized unit = savings", "cta": "Save this", "visual": "Sizing graphic, energy savings", "A": "Bigger isn't always better when it comes to your AC. \ud83d\udccf", "I": "An oversized unit short-cycles and wastes energy; an undersized one never keeps up.", "D": "A correctly sized system means lower bills and even, consistent comfort.", "Action": "\ud83d\udcbe Save this \u2014 and let us size it right for your home."}, {"id": 21, "date": "Aug 21", "day": "Thu", "pillar": "MOFU Trust", "funnel": "Consideration", "topic": "10-year parts / 2-year labor warranty", "cta": "Free estimate", "visual": "Warranty seal pop-art", "A": "What happens after the install? We've got you. \ud83e\udd1d", "I": "Empire backs new installations with a 10-year parts warranty and a 2-year labor guarantee.", "D": "That's long-term protection you won't find with a fly-by-night installer.", "Action": "\ud83d\udcde Ask about our warranties: 915.787.0747."}, {"id": 22, "date": "Aug 22", "day": "Fri", "pillar": "TOFU Lifestyle", "funnel": "Awareness", "topic": "Our values \u2014 God is big enough", "cta": "React", "visual": "Warm brand values graphic", "A": "Behind every job is a promise. \ud83d\ude4f", "I": "\"God is big enough\" and \"A New Standard of Service\" aren't just slogans \u2014 they guide how we treat every customer.", "D": "Honest work, fair pricing, and neighbors helping neighbors.", "Action": "\u2764\ufe0f React if you value doing business the right way."}, {"id": 23, "date": "Aug 23", "day": "Sat", "pillar": "BOFU Service", "funnel": "Conversion", "topic": "Commercial HVAC", "cta": "Request quote", "visual": "Commercial building + rooftop unit pop-art", "A": "Keeping your business cool is our business too. \ud83c\udfe2", "I": "From offices to retail, Empire handles large-scale commercial HVAC with the right equipment and experience.", "D": "Comfortable customers and employees \u2014 and systems that don't quit during a heat wave.", "Action": "\ud83d\udccb Request a commercial quote: 915.787.0747."}, {"id": 24, "date": "Aug 24", "day": "Sun", "pillar": "TOFU Education", "funnel": "Awareness", "topic": "Pre-fall maintenance checklist", "cta": "Save this", "visual": "Checklist graphic, cool-down season", "A": "Summer's not over \u2014 but smart homeowners plan ahead. \ud83d\udccb", "I": "A late-summer tune-up keeps your system efficient now and ready for the season change.", "D": "Change filters, check refrigerant, clear the condenser \u2014 or let us handle it all.", "Action": "\ud83d\udcbe Save this checklist and book your maintenance."}, {"id": 25, "date": "Aug 25", "day": "Mon", "pillar": "MOFU Trust", "funnel": "Consideration", "topic": "Before / after install", "cta": "Comment", "visual": "Before/after real install photo (client-provided)", "A": "Swipe-worthy transformation. \ud83d\udd27\u27a1\ufe0f\u2744\ufe0f", "I": "A real Empire refrigerated air installation \u2014 from outdated system to clean, efficient comfort.", "D": "This is the kind of work that earns 4.9 stars and lifelong customers.", "Action": "\ud83d\udcac What do you think? Comment below!"}, {"id": 26, "date": "Aug 26", "day": "Tue", "pillar": "BOFU Conversion", "funnel": "Conversion", "topic": "Same-day appointments", "cta": "Call now", "visual": "'SAME-DAY' urgent pop-art banner", "A": "Don't suffer through another hot day. \u2600\ufe0f", "I": "Empire offers same-day appointments so you're not stuck waiting a week in the heat.", "D": "Fast, professional service when you need it most.", "Action": "\ud83d\udcde Call now for same-day help: 915.787.0747."}, {"id": 27, "date": "Aug 27", "day": "Wed", "pillar": "TOFU Education", "funnel": "Awareness", "topic": "Signs your furnace needs a check", "cta": "Share", "visual": "Furnace graphic, cool-weather preview", "A": "Cooler nights are coming. Is your furnace ready? \ud83c\udf42", "I": "Strange smells, uneven heat, or a system that won't start are early warning signs.", "D": "A quick fall check-up now avoids a cold surprise later.", "Action": "\ud83d\udd01 Share this with someone who forgot about their furnace."}, {"id": 28, "date": "Aug 28", "day": "Thu", "pillar": "MOFU Trust", "funnel": "Consideration", "topic": "Real review \u2014 Durga D.", "cta": "See more", "visual": "5-star review card (client-authorized review)", "A": "\"Honest, reliable and trustworthy.\" \u2b50\u2b50\u2b50\u2b50\u2b50", "I": "Durga D. had an AC problem fixed in 2 hours \u2014 quality work at a fair price.", "D": "Fast, honest, affordable. That's the Empire way.", "Action": "\u2b50 See more reviews from your El Paso neighbors."}, {"id": 29, "date": "Aug 29", "day": "Fri", "pillar": "TOFU Engagement", "funnel": "Awareness", "topic": "Se Habla Espa\u00f1ol", "cta": "Comment", "visual": "Bilingual friendly graphic, mascot waving", "A": "Aqu\u00ed te atendemos en tu idioma. \ud83c\uddf2\ud83c\uddfd\ud83c\uddfa\ud83c\uddf8", "I": "Empire proudly serves El Paso in English AND Spanish \u2014 comfort with no language barrier.", "D": "Clear answers, honest advice, and a team that treats you like family.", "Action": "\ud83d\udcac Comment in the language you prefer \u2014 we'll reply!"}, {"id": 30, "date": "Aug 30", "day": "Sat", "pillar": "BOFU Conversion", "funnel": "Conversion", "topic": "End-of-month \u2014 book your free estimate", "cta": "Free estimate", "visual": "Strong CTA pop-art, ZERO DOWN + $1,800 OFF recap", "A": "Last chance this month to lock in your savings. \u23f3", "I": "ZERO DOWN, $1,800 OFF conversions, and financing available \u2014 but summer won't wait.", "D": "Upgrade to refrigerated air and finally beat the El Paso heat for good.", "Action": "\ud83d\udcde Book your FREE estimate today: 915.787.0747 \u00b7 WeNeedAir.com"}];
+ // Facebook Ads reuse existing creative images, conversion-focused copy
+const ADS=[
+  {id:1, img:'images/day01.png', topic:'Swamp Cooler vs Refrigerated Air', pillar:'Conversion', cta:'Free Estimate',
+    copy:"Still fighting your swamp cooler every El Paso summer? 💧 Real refrigerated air holds a true 72°F, kills the humidity, and runs all summer long. Convert now with ZERO DOWN. 📞 Get your FREE estimate today: 915.787.0747 or comment \"AIR\"."},
+  {id:2, img:'images/day06.png', topic:'$1,800 OFF Refrigeration Conversion', pillar:'Offer', cta:'DM \"AIR\"',
+    copy:"$1,800 reasons to ditch that swamp cooler. 💰 Convert your old system to true refrigerated air and save $1,800 on the upgrade. Cooler home, lower humidity, higher value. 💬 DM \"AIR\" or call 915.787.0747 to claim it."},
+  {id:3, img:'images/day17.png', topic:'Financing — ZERO DOWN · 0%', pillar:'Offer', cta:'DM \"PLAN\"',
+    copy:"A new AC without draining your savings? Yes. 💳 With financing, ZERO DOWN and low monthly payments, comfort is more affordable than ever. Stay cool now, pay over time. 💬 DM \"PLAN\" or call 915.787.0747 to see your options."},
+  {id:4, img:'images/day04.png', topic:'Same-Day AC Repair', pillar:'Service', cta:'Call Now',
+    copy:"AC blowing warm air? Don't sweat it out. 🔥 Our certified techs diagnose fast and fix it right the first time — same-day appointments available. 📞 Call 915.787.0747 now for same-day service."}
+];
+
 const state={};
-POSTS.forEach(p=>state[p.id]={status:null,note:''});
+POSTS.forEach(p=>state['p'+p.id]={status:null,note:''});
+ADS.forEach(a=>state['a'+a.id]={status:null,note:''});
 function esc(s){return (s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
 function pad(n){return String(n).padStart(2,'0')}
+
+function postCard(p){
+  const st=state['p'+p.id];const flag=st.status||'pending';
+  const flagtxt=flag==='approved'?'APPROVED':flag==='changes'?'CHANGES':'PENDING';
+  const img=`images/day${pad(p.id)}.png`;
+  return `<article class="card reveal">
+    <div class="top"><div class="dt">${esc(p.date)} <small>${esc(p.day)}</small></div><div class="pill">${esc(p.funnel)}</div></div>
+    <div class="imgwrap" onclick="zoom('${img}')">
+      <span class="statusflag ${flag}">${flagtxt}</span>
+      <img loading="lazy" src="${img}" alt="Day ${p.id}: ${esc(p.topic)}" onerror="this.style.display='none';this.parentNode.querySelector('.ph').style.display='block'">
+      <div class="ph" style="display:none">🎨 Image generating…<br><small>${esc(p.visual)}</small></div>
+    </div>
+    <div class="body">
+      <div class="topic">${esc(p.topic)}</div>
+      <div class="tags"><span class="tag">${esc(p.pillar)}</span><span class="tag">CTA: ${esc(p.cta)}</span></div>
+      <div class="aida">${esc(p.A)} ${esc(p.I)} ${esc(p.D)} ${esc(p.Action)}</div>
+    </div>
+    <div class="actions">
+      <button class="btn approve ${st.status==='approved'?'on':''}" onclick="setStatus('p${p.id}','approved')">✅ Approve</button>
+      <button class="btn change ${st.status==='changes'?'on':''}" onclick="setStatus('p${p.id}','changes')">✏️ Request Changes</button>
+      <textarea class="note ${st.status==='changes'?'show':''}" placeholder="What would you like changed?" oninput="setNote('p${p.id}',this.value)">${esc(st.note)}</textarea>
+    </div>
+  </article>`;
+}
+
+function adCard(a){
+  const st=state['a'+a.id];const flag=st.status||'pending';
+  const flagtxt=flag==='approved'?'APPROVED':flag==='changes'?'CHANGES':'PENDING';
+  const img=a.img;
+  return `<article class="card ad reveal">
+    <div class="top"><div class="dt">FB AD</div><div class="adtag">${esc(a.pillar)}</div></div>
+    <div class="imgwrap" onclick="zoom('${img}')">
+      <span class="statusflag ${flag}">${flagtxt}</span>
+      <img loading="lazy" src="${img}" alt="Ad: ${esc(a.topic)}" onerror="this.style.display='none';this.parentNode.querySelector('.ph').style.display='block'">
+      <div class="ph" style="display:none">🎨 Image generating…</div>
+    </div>
+    <div class="body">
+      <div class="topic">${esc(a.topic)}</div>
+      <div class="tags"><span class="tag">FB AD</span><span class="tag">CTA: ${esc(a.cta)}</span></div>
+      <div class="aida">${esc(a.copy)}</div>
+    </div>
+    <div class="actions">
+      <button class="btn approve ${st.status==='approved'?'on':''}" onclick="setStatus('a${a.id}','approved')">✅ Approve</button>
+      <button class="btn change ${st.status==='changes'?'on':''}" onclick="setStatus('a${a.id}','changes')">✏️ Request Changes</button>
+      <textarea class="note ${st.status==='changes'?'show':''}" placeholder="What would you like changed?" oninput="setNote('a${a.id}',this.value)">${esc(st.note)}</textarea>
+    </div>
+  </article>`;
+}
+
 function render(){
-  const g=document.getElementById('grid');
-  g.innerHTML=POSTS.map(p=>{
-    const st=state[p.id];const flag=st.status||'pending';
-    const flagtxt=flag==='approved'?'APPROVED':flag==='changes'?'CHANGES':'PENDING';
-    const img=`images/day${pad(p.id)}.png`;
-    return `<div class="card">
-      <div class="top"><div class="dt">${esc(p.date)} <small>${esc(p.day)}</small></div><div class="pill">${esc(p.funnel)}</div></div>
-      <div class="imgwrap" onclick="zoom('${img}')">
-        <span class="statusflag ${flag}">${flagtxt}</span>
-        <img loading="lazy" src="${img}" alt="Day ${p.id}: ${esc(p.topic)}" onerror="this.style.display='none';this.parentNode.querySelector('.ph').style.display='block'">
-        <div class="ph" style="display:none">🎨 Image generating…<br><small>${esc(p.visual)}</small></div>
-      </div>
-      <div class="body">
-        <div class="topic">${esc(p.topic)}</div>
-        <div class="tags"><span class="tag">${esc(p.pillar)}</span><span class="tag">CTA: ${esc(p.cta)}</span></div>
-        <div class="aida">${esc(p.A)} ${esc(p.I)} ${esc(p.D)} ${esc(p.Action)}</div>
-      </div>
-      <div class="actions">
-        <button class="btn approve ${st.status==='approved'?'on':''}" onclick="setStatus(${p.id},'approved')">✅ Approve</button>
-        <button class="btn change ${st.status==='changes'?'on':''}" onclick="setStatus(${p.id},'changes')">✏️ Changes</button>
-        <textarea class="note ${st.status==='changes'?'show':''}" placeholder="What would you like changed? / ¿Qué cambiarías?" oninput="setNote(${p.id},this.value)">${esc(st.note)}</textarea>
-      </div>
-    </div>`;
-  }).join('');
+  document.getElementById('grid').innerHTML=POSTS.map(postCard).join('');
+  document.getElementById('ads').innerHTML=ADS.map(adCard).join('');
   updateCounts();
+  observeReveal();
 }
 function zoom(src){document.getElementById('lbimg').src=src;document.getElementById('lb').classList.add('on')}
-function setStatus(id,s){state[id].status=(state[id].status===s?null:s);render()}
-function setNote(id,v){state[id].note=v}
-function updateCounts(){let ok=0,ch=0;Object.values(state).forEach(s=>{if(s.status==='approved')ok++;else if(s.status==='changes')ch++});
-  document.getElementById('cOk').textContent=ok;document.getElementById('cCh').textContent=ch;document.getElementById('cPe').textContent=30-ok-ch}
-function toast(msg,color){const t=document.getElementById('toast');t.textContent=msg;t.style.background=color||'#14c96e';t.style.display='block';setTimeout(()=>t.style.display='none',4000)}
+function setStatus(k,s){state[k].status=(state[k].status===s?null:s);render()}
+function setNote(k,v){state[k].note=v}
+function updateCounts(){
+  let ok=0,ch=0,n=0;
+  Object.values(state).forEach(s=>{if(s.status==='approved')ok++;else if(s.status==='changes')ch++;else n++});
+  document.getElementById('cOk').textContent=ok;document.getElementById('cCh').textContent=ch;document.getElementById('cPe').textContent=n;
+}
+function toast(msg,color){
+  const t=document.getElementById('toast');t.textContent=msg;t.style.background=color||'#14c96e';t.style.display='block';
+  setTimeout(()=>t.style.display='none',4000);
+}
 async function submitReview(){
   const name=document.getElementById('clientName').value.trim();
-  if(!name){toast('Please enter your name / Escribe tu nombre','#FF0067');return}
-  const btn=document.getElementById('sendBtn');btn.disabled=true;btn.textContent='Sending...';
-  const review={posts:POSTS.map(p=>({id:p.id,status:state[p.id].status||'pending',note:state[p.id].note||''}))};
+  if(!name){toast('Please enter your name','#FF0067');return}
+  const btn=document.getElementById('sendBtn');btn.disabled=true;btn.textContent='Sending…';
+  const review={posts:POSTS.map(p=>({id:p.id,type:'post',status:state['p'+p.id].status||'pending',note:state['p'+p.id].note||''})),
+    ads:ADS.map(a=>({id:a.id,type:'ad',status:state['a'+a.id].status||'pending',note:state['a'+a.id].note||''}))};
   try{
     const r=await fetch(`${SUPABASE_URL}/rest/v1/approvals`,{method:'POST',
       headers:{'Content-Type':'application/json','apikey':SUPABASE_ANON,'Authorization':`Bearer ${SUPABASE_ANON}`,'Prefer':'return=minimal'},
       body:JSON.stringify({client:CLIENT,campaign:CAMPAIGN,client_name:name,review})});
     if(!r.ok)throw new Error('HTTP '+r.status);
-    toast('✅ Thank you! Your approval was received. / ¡Gracias! Recibimos tu respuesta.');btn.textContent='✅ Sent / Enviado';
-  }catch(e){toast('Error: '+e.message,'#FF0067');btn.disabled=false;btn.textContent='✅ Submit Approval / Enviar'}
+    toast('✅ Thank you! Your approval was received.');btn.textContent='✅ Sent';
+  }catch(e){toast('Error: '+e.message,'#FF0067');btn.disabled=false;btn.textContent='✅ Submit Approval'}
 }
 function mergeSupabase(){
   return fetch(`${SUPABASE_URL}/rest/v1/approvals?client=eq.${encodeURIComponent(CLIENT)}&campaign=eq.${encodeURIComponent(CAMPAIGN)}&order=created_at.desc&select=review,client_name&limit=1`,
     {headers:{'apikey':SUPABASE_ANON,'Authorization':`Bearer ${SUPABASE_ANON}`}})
-    .then(r=>r.ok?r.json():[]).then(rows=>{if(rows[0]&&rows[0].review&&rows[0].review.posts){rows[0].review.posts.forEach(p=>{if(state[p.id]){if(p.status&&p.status!=='pending')state[p.id].status=p.status;if(p.note)state[p.id].note=p.note}})}}).catch(e=>{});
+    .then(r=>r.ok?r.json():[]).then(rows=>{
+      if(rows[0]&&rows[0].review){const rev=rows[0].review;
+        (rev.posts||[]).forEach(p=>{if(state['p'+p.id]){if(p.status&&p.status!=='pending')state['p'+p.id].status=p.status;if(p.note)state['p'+p.id].note=p.note}});
+        (rev.ads||[]).forEach(a=>{if(state['a'+a.id]){if(a.status&&a.status!=='pending')state['a'+a.id].status=a.status;if(a.note)state['a'+a.id].note=a.note}});
+      }
+    }).catch(e=>{});
+}
+// reveal-on-scroll
+let io;
+function observeReveal(){
+  if(!('IntersectionObserver' in window)){document.querySelectorAll('.reveal').forEach(e=>e.classList.add('in'));return;}
+  if(!io){io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08});}
+  document.querySelectorAll('.reveal:not(.in)').forEach(e=>io.observe(e));
 }
 if(new URLSearchParams(location.search).get('team')==='1'){mergeSupabase().then(render)}else{render()}
 </script>
