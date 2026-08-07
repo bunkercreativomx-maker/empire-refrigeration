@@ -187,7 +187,7 @@ function postCard(p){
   const img=`images/day${pad(p.id)}.png`;
   // Posts 10 y 13 tuvieron cambios aplicados según cliente
   const changesApplied = [10, 13].includes(p.id);
-  return `<article class="card reveal ${flag}">
+  return `<article class="card reveal in ${flag}">
     <div class="top"><div class="dt">${esc(p.date)} <small>${esc(p.day)}</small></div><div class="pill">${esc(p.funnel)}</div></div>
     <div class="imgwrap" onclick="zoom('${img}')">
       <span class="statusflag ${flag}">${flagtxt}</span>
@@ -214,7 +214,7 @@ function adCard(a){
   const flag=st.status||'pending';
   const flagtxt=flag==='approved'?'APPROVED':flag==='changes'?'CHANGES':'PENDING';
   const img=a.img;
-  return `<article class="card ad reveal ${flag}">
+  return `<article class="card ad reveal in ${flag}">
     <div class="top"><div class="dt">FB AD</div><div class="adtag">${esc(a.pillar)}</div></div>
     <div class="imgwrap" onclick="zoom('${img}')">
       <span class="statusflag ${flag}">${flagtxt}</span>
@@ -244,7 +244,7 @@ function setStatus(k,s){state[k].status=(state[k].status===s?null:s);render()}
 function setNote(k,v){state[k].note=v}
 function updateCounts(){
   let ok=0,ch=0,n=0;
-  Object.values(state).forEach(s=>{if(s.status==='approved')ok++;else if(s.status==='changes')ch++;else n++});
+  Object.entries(state).forEach(([k,s])=>{if(!k.startsWith('p'))return;if(s.status==='approved')ok++;else if(s.status==='changes')ch++;else n++});
   document.getElementById('cOk').textContent=ok;
   document.getElementById('cCh').textContent=ch;
   document.getElementById('cPe').textContent=n;
