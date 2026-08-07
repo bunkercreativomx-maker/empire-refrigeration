@@ -61,6 +61,9 @@
   .statusflag.pending{background:rgba(255,242,0,.92);color:#000}
   .statusflag.approved{background:rgba(20,201,110,.95);color:#022}
   .statusflag.changes{background:var(--pink);color:#fff}
+  .change-badge{position:absolute;top:10px;right:10px;background:var(--yellow);color:var(--navy);font-size:.7rem;font-weight:800;padding:6px 10px;border-radius:20px;z-index:2;box-shadow:0 4px 12px rgba(255,242,0,.4);display:flex;align-items:center;gap:4px;}
+  .change-badge.applied{background:rgba(20,201,110,.95);color:#022;}
+  .change-badge::before{content:"✓";font-weight:bold;}
   .body{padding:15px;flex:1;display:flex;flex-direction:column;}
   .topic{font-weight:800;color:#fff;font-size:1.02rem;margin-bottom:5px;line-height:1.25}
   .tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
@@ -170,15 +173,19 @@ function postCard(p){
   const st=state['p'+p.id];const flag=st.status||'pending';
   const flagtxt=flag==='approved'?'APPROVED':flag==='changes'?'CHANGES':'PENDING';
   const img=`images/day${pad(p.id)}.png`;
+  // Posts 10 y 13 tuvieron cambios aplicados según cliente
+  const changesApplied = [10, 13].includes(p.id);
   return `<article class="card reveal">
     <div class="top"><div class="dt">${esc(p.date)} <small>${esc(p.day)}</small></div><div class="pill">${esc(p.funnel)}</div></div>
     <div class="imgwrap" onclick="zoom('${img}')">
       <span class="statusflag ${flag}">${flagtxt}</span>
+      ${changesApplied ? '<span class="change-badge applied">✓ CHANGES APPLIED</span>' : ''}
       <img loading="lazy" src="${img}" alt="Day ${p.id}: ${esc(p.topic)}" onerror="this.style.display='none';this.parentNode.querySelector('.ph').style.display='block'">
       <div class="ph" style="display:none">🎨 Image generating…<br><small>${esc(p.visual)}</small></div>
     </div>
     <div class="body">
       <div class="topic">${esc(p.topic)}</div>
+      ${changesApplied ? '<div style="background:rgba(255,0,103,.1);border:1px solid rgba(255,0,103,.3);border-radius:8px;padding:8px 12px;margin:8px 0;"><span style="color:var(--pink);font-weight:700;font-size:.75rem;">✓ CLIENT CHANGES APPLIED</span><br><span style="color:var(--ink);font-size:.72rem;">'+esc(st.note)+'</span></div>' : ''}
       <div class="tags"><span class="tag">${esc(p.pillar)}</span><span class="tag">CTA: ${esc(p.cta)}</span></div>
       <div class="aida">${esc(p.A)} ${esc(p.I)} ${esc(p.D)} ${esc(p.Action)}</div>
     </div>
