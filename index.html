@@ -71,9 +71,8 @@
   .tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
   .tag{font-size:.66rem;padding:3px 8px;border-radius:5px;background:rgba(10,28,49,.6);color:var(--mut);border:1px solid var(--line)}
   .aida{font-size:.86rem;margin:6px 0 4px;color:#d6e2f0;line-height:1.55}
-  .actions{padding:13px 14px;border-top:1px solid var(--line);display:none;gap:9px;flex-wrap:wrap;
+  .actions{padding:13px 14px;border-top:1px solid var(--line);display:flex;gap:9px;flex-wrap:wrap;
     background:rgba(8,17,28,.3);border-top:1px solid var(--line);}
-  .actions.admin-mode{display:flex;}
   .btn{flex:1;min-width:96px;padding:11px;border:none;border-radius:11px;font-weight:800;font-size:.82rem;cursor:pointer;
     transition:transform .22s,box-shadow .3s,filter .3s;font-family:inherit;color:#fff;}
   .btn.approve{background:linear-gradient(120deg,#0e9b54,#16c96e);box-shadow:0 8px 22px rgba(20,201,110,.28);}
@@ -84,9 +83,10 @@
   .btn:active{transform:translateY(0) scale(.97);}
   .legend{color:var(--mut);font-size:.8rem;padding:4px 2px 0}
   .legend b{color:var(--ink)}
+  .note{width:100%;min-height:58px;padding:9px 12px;border:1px solid var(--line);border-radius:9px;background:#0f2036;color:var(--ink);font-size:.82rem;font-family:inherit;resize:vertical;margin-top:2px;}
+  .note:focus{outline:none;border-color:var(--yellow);box-shadow:0 0 0 3px rgba(255,242,0,.18);}
   .submit{position:sticky;bottom:0;z-index:25;background:rgba(8,17,28,.92);backdrop-filter:blur(14px);border-top:1px solid var(--yellow);
-    padding:16px 20px;display:none;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center;}
-  .submit.admin-mode{display:flex;}
+    padding:16px 20px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center;}
   .field{padding:11px 13px;border:1px solid var(--line);border-radius:10px;background:#0f2036;color:var(--ink);font-size:.92rem;min-width:220px;font-family:inherit;}
   .field:focus{outline:none;border-color:var(--yellow);box-shadow:0 0 0 3px rgba(255,242,0,.18);}
   .send{background:var(--yellow);color:var(--navy);font-weight:900;padding:13px 30px;border:none;border-radius:11px;font-size:1rem;cursor:pointer;
@@ -154,7 +154,7 @@
 
 <script>
 const SUPABASE_URL='https://nmykwwhpjukmlzhaimuu.supabase.co';
-const SUPABASE_ANON='';
+const SUPABASE_ANON='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5teWt3d2hwanVrbWx6aGFpbXV1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODUwMTc3NzAsImV4cCI6MjEwMDU5Mzc3MH0.XAnVz_2Z8YpHYqSK8u_mYeS5o__ULVwi9SqqByVpE_o';
 const CLIENT='empire-refrigeration';
 const CAMPAIGN='august-2026';
 
@@ -252,6 +252,21 @@ function updateCounts(){
 function toast(msg,color){
   const t=document.getElementById('toast');t.textContent=msg;t.style.background=color||'#14c96e';t.style.display='block';
   setTimeout(()=>t.style.display='none',4000);
+}
+async function submitReview(){
+  const name=document.getElementById('clientName').value.trim();
+  if(!name){toast('Please enter your name','#FF0067');return}
+  if(!SUPABASE_ANON){toast('Saving is disabled in this view','#FF0067');return}
+  const btn=document.getElementById('sendBtn');btn.disabled=true;btn.textContent='Sending…';
+  const review={posts:POSTS.map(p=>({id:p.id,type:'post',status:state['p'+p.id].status||'pending',note:state['p'+p.id].note||''})),
+    ads:ADS.map(a=>({id:a.id,type:'ad',status:state['a'+a.id].status||'pending',note:state['a'+a.id].note||''}))};
+  try{
+    const r=await fetch(`${SUPABASE_URL}/rest/v1/approvals`,{method:'POST',
+      headers:{'Content-Type':'application/json','apikey':SUPABASE_ANON,'Authorization':`Bearer ${SUPABASE_ANON}`,'Prefer':'return=minimal'},
+      body:JSON.stringify({client:CLIENT,campaign:CAMPAIGN,client_name:name,review})});
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    toast('✅ Thank you! Your approval was received.');btn.textContent='✅ Sent';
+  }catch(e){toast('Error: '+e.message,'#FF0067');btn.disabled=false;btn.textContent='✅ Submit Approval'}
 }
 // Estado inicial ya hardcodeado desde Supabase
 render();
