@@ -197,7 +197,7 @@ function postCard(p){
     </div>
     <div class="body">
       <div class="topic">${esc(p.topic)}</div>
-      ${changesApplied ? '<div style="background:rgba(255,0,103,.1);border:1px solid rgba(255,0,103,.3);border-radius:8px;padding:10px 14px;margin:8px 0;"><span style="color:var(--pink);font-weight:700;font-size:.8rem;">✓ SOLICITUD DE CAMBIOS DEL CLIENTE</span><br><span style="color:var(--ink);font-size:.75rem;">'+esc(st.note)+'</span><br><span style="color:var(--approved);font-weight:700;font-size:.8rem;">✅ CAMBIO APLICADO — CONTENIDO ACTUALIZADO</span></div>' : ''}
+      ${changesApplied ? `<div style="background:rgba(255,0,103,.1);border:1px solid rgba(255,0,103,.3);border-radius:8px;padding:10px 14px;margin:8px 0;"><span style="color:var(--pink);font-weight:700;font-size:.8rem;">✓ SOLICITUD DE CAMBIOS DEL CLIENTE</span><br><span style="color:var(--ink);font-size:.75rem;">${esc(st.note)}</span><br><span style="color:var(--approved);font-weight:700;font-size:.8rem;">✅ CAMBIO APLICADO — CONTENIDO ACTUALIZADO</span></div>` : ''}
       <div class="tags"><span class="tag">${esc(p.pillar)}</span><span class="tag">CTA: ${esc(p.cta)}</span></div>
       <div class="aida">${esc(p.A)} ${esc(p.I)} ${esc(p.D)} ${esc(p.Action)}</div>
     </div>
