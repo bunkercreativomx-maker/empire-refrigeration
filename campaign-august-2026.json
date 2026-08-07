@@ -189,19 +189,19 @@
    "id": 10,
    "date": "Aug 10",
    "day": "Sun",
-   "pillar": "TOFU Lifestyle",
-   "funnel": "Awareness",
-   "topic": "Summer comfort at home",
-   "cta": "React ❄️",
-   "visual": "Family relaxing in cool home, warm-cool contrast",
-   "A": "This is what a real El Paso summer should feel like. ❄️",
-   "I": "No sticky humidity. No warm rooms. Just cool, quiet comfort for the whole family.",
-   "D": "Your home should be your escape from the heat — not another hot spot.",
-   "Action": "❄️ React if your home is your happy place!",
+   "pillar": "BOFU Offer",
+   "funnel": "Conversion",
+   "topic": "12 months no payments",
+   "cta": "Comment 'PAYMENTS'",
+   "visual": "Pop-art: credit card crossed out over calendar with months X'd out Aug-Dec 2025, '12 MONTHS NO PAYMENTS' headline, 'ZERO DOWN' badge",
+   "A": "New AC this season — no payments until 2026. 💰",
+   "I": "With our special 12-months-no-payments offer, install now and enjoy comfort without any cost until next year.",
+   "D": "Why pay today when you can defer until 2026? No payments, no worries.",
+   "Action": "💬 Text 'PAYMENTS' to 915.787.0747 or comment below to secure yours today.",
    "concept": {
-    "headline": "\"REAL SUMMER COMFORT\" white script, \"FOR YOUR FAMILY\" block",
-    "scene": "a cozy cool living room with snowflakes, relaxed comfortable atmosphere",
-    "offer": null
+    "headline": "\"12 MONTHS NO PAYMENTS\" white letters with golden glow",
+    "scene": "credit card crossed out over calendar with months X'd out Aug-Dec 2025, PAY IN 2026 highlighted",
+    "offer": "12 MONTHS NO PAYMENTS badge"
    }
   },
   {
@@ -246,19 +246,19 @@
    "id": 13,
    "date": "Aug 13",
    "day": "Wed",
-   "pillar": "TOFU Engagement",
-   "funnel": "Awareness",
-   "topic": "Guess El Paso's temp today",
-   "cta": "Comment",
-   "visual": "Big thermometer, desert sun, mascot sweating",
-   "A": "How hot is it in the Sun City today? ☀️",
-   "I": "Take a guess at today's high temperature in El Paso.",
-   "D": "Whatever it is out there, your home doesn't have to feel it.",
-   "Action": "💬 Drop your guess in the comments!",
+   "pillar": "BOFU Offer",
+   "funnel": "Conversion",
+   "topic": "Pay over time",
+   "cta": "Comment 'PAYMENTS'",
+   "visual": "Pop-art: coins falling into calendar with cool modern house background, 'PAY OVER TIME' headline, '0% INTEREST' badge",
+   "A": "Did you know you can split your new AC into monthly payments? 💸",
+   "I": "You don't need all the money upfront. Our flexible payment options help you enjoy comfort without breaking your budget.",
+   "D": "Low payments, competitive rates, and fast approval — comfort deserves a plan that works for you.",
+   "Action": "💳 Text 'PLAN' to 915.787.0747 or comment 'PAYMENTS' to check your options.",
    "concept": {
-    "headline": "\"HOW HOT IS EL PASO TODAY?\" yellow block letters",
-    "scene": "a giant thermometer bursting with heat and a blazing desert sun",
-    "offer": null
+    "headline": "\"PAY OVER TIME\" bold blue and white block letters",
+    "scene": "coins falling into calendar with cool modern house background, comic style",
+    "offer": "0% INTEREST badge"
    }
   },
   {
